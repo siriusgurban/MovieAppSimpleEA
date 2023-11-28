@@ -109,13 +109,13 @@ input1.addEventListener("input", () => {    //find method
     })
 
     main_card.innerHTML = indexTitle.map(el => {    
-        return `<div class="card" style="width: 18rem;">
-            <img src="${el.Poster}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">${el.Title}</h5>
-                <p class="card-text">${el.Year}</p>
-            </div>
-        </div>`
+        return `<div class="card my-4 " style="width: 18rem; cursor: pointer">
+        <img src="${el.Poster}" class="card-img-top" alt="..." style="height: 360px">
+        <div class="card-body">
+            <h5 class="card-title">${el.Title}</h5>
+            <p class="card-text">${el.Year}</p>
+        </div>
+    </div>`
     }).join("");
 })
 
@@ -123,8 +123,8 @@ btnClear.addEventListener("click", (e) => {  //clear input
     e.preventDefault();
     input1.value = "";
     main_card.innerHTML = data.Search.map(el => {
-        return `<div class="card" style="width: 18rem;">
-        <img src="${el.Poster}" class="card-img-top" alt="...">
+        return `<div class="card my-4 " style="width: 18rem; cursor: pointer">
+        <img src="${el.Poster}" class="card-img-top" alt="..." style="height: 360px">
         <div class="card-body">
             <h5 class="card-title">${el.Title}</h5>
             <p class="card-text">${el.Year}</p>
